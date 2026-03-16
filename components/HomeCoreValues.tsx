@@ -52,21 +52,30 @@ function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
 
 export function HomeCoreValues() {
   return (
-    <section
-      className="px-6 py-16 sm:px-10 lg:px-0 lg:py-30"
-      aria-labelledby="home-core-values-heading"
-    >
-      <div className="mx-auto max-w-[1111px]">
+    <div className="relative max-w-277.75 mx-auto">
+      <Image
+        src="/shapes/bg-pattern-leaf.svg"
+        alt=""
+        aria-hidden="true"
+        width={1609}
+        height={950}
+        className="pointer-events-none absolute top-31 -right-41 hidden h-[594px] w-[1006px] max-w-none rotate-180 xl:block "
+      />
+
+      <section
+        className="relative isolate overflow-hidden px-6 py-16 sm:px-10 lg:px-0 lg:pb-30 lg:pt-0"
+        aria-labelledby="home-core-values-heading"
+      >
         <h2 id="home-core-values-heading" className="sr-only">
           Core values
         </h2>
 
-        <div className="grid justify-items-center gap-16 lg:grid-cols-3 lg:gap-[30px]">
+        <div className="relative grid justify-items-center gap-16 lg:grid-cols-3 lg:gap-[30px]">
           {coreValues.map((value) => (
             <HomeCoreValueCard key={value.title} {...value} />
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

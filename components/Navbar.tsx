@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigationLinks = [
   { href: "/company", label: "Our Company" },
@@ -8,6 +11,8 @@ const navigationLinks = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+
   return (
     <header className="bg-designo-white px-6 py-8 sm:px-10 lg:px-0 lg:py-16">
       <nav
@@ -25,15 +30,24 @@ export function Navbar() {
         </Link>
 
         <div className="flex items-center gap-[42px]">
-          {navigationLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-[14px] leading-[14px] font-normal tracking-[2px] uppercase text-designo-grey-dark"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navigationLinks.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`text-[14px] leading-[14px] font-normal tracking-[2px] uppercase transition-colors duration-200 ${
+                  isActive
+                    ? "text-designo-peach hover:text-designo-peach-light"
+                    : "text-designo-grey-dark hover:text-designo-peach"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </header>

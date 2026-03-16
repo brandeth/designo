@@ -26,7 +26,7 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--color-designo-grey-light);
   color: var(--foreground);
   font-family: var(--font-jost), Arial, Helvetica, sans-serif;
 }

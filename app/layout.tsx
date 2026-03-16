@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
+import { SiteFooterBlock } from "@/components/SiteFooterBlock";
 import "./globals.css";
 
 const jost = Jost({
@@ -20,9 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jost.variable} antialiased bg-designo-white`}>
+      <body
+        className={`${jost.variable} flex flex-col bg-designo-grey-dark antialiased overflow-x-hidden max-w-360 mx-auto`}
+      >
         <Navbar />
-        <div className="max-w-277.75 mx-auto">{children}</div>
+
+        {/* max-w-277.75 */}
+        <div className="mx-auto w-full max-w-360 flex-1 z-1">{children}</div>
+        <SiteFooterBlock />
       </body>
     </html>
   );
