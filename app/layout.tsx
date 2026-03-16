@@ -27,7 +27,9 @@ export default function RootLayout({
         <Navbar />
 
         {/* max-w-277.75 */}
-        <div className="mx-auto w-full max-w-360 flex-1 z-1">{children}</div>
+        <div className="mx-auto w-full max-w-360 flex-1 z-1 bg-designo-white md:max-xl:px-6">
+          {children}
+        </div>
         <SiteFooterBlock />
       </body>
     </html>

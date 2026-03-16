@@ -69,8 +69,8 @@ export function Footer({ className }: FooterProps) {
 
   return (
     <footer className={classes}>
-      <div className="mx-auto flex max-w-[1111px] flex-col gap-10 lg:gap-8">
-        <div className="flex flex-col items-center gap-10 text-center lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:text-left">
+      <div className="mx-auto flex max-w-277.75 flex-col gap-10 lg:gap-8">
+        <div className="flex flex-col items-center gap-10 text-center md:justify-between md:flex-row lg:items-center lg:justify-between lg:gap-12 lg:text-left">
           <Link href="/" aria-label="Designo home">
             <Image
               src="/designo-logo-with-text-alt.svg"
@@ -98,7 +98,7 @@ export function Footer({ className }: FooterProps) {
 
         <div className="h-px w-full bg-designo-white/10" />
 
-        <div className="grid gap-10 text-center text-designo-white sm:gap-7.5 lg:grid-cols-[350px_350px_1fr] lg:items-end lg:text-left">
+        <div className="grid gap-10 text-center text-designo-white sm:gap-7.5 lg:grid-cols-[350px_350px_1fr] md:grid-cols-[1fr_1fr_auto] lg:items-end md:text-left">
           <div className="text-preset-body opacity-50">
             <p className="font-bold">Designo Central Office</p>
             <p>3886 Wellington Street</p>
@@ -111,7 +111,7 @@ export function Footer({ className }: FooterProps) {
             <p>M : contact@designo.co</p>
           </div>
 
-          <div className="flex items-center justify-center gap-4 lg:justify-end">
+          <div className="flex items-center md:items-end justify-center md:justify-end gap-4 lg:justify-end">
             {socialLinks.map(({ href, label, renderIcon }) => (
               <Link
                 key={label}

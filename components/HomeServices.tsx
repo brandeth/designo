@@ -16,21 +16,21 @@ const homeServices: HomeService[] = [
     href: "/web-design",
     imageSrc: "/images/web-design.png",
     priority: true,
-    cardClassName: "lg:h-full",
+    cardClassName: "xl:h-full",
     imageSizes: "(min-width: 1024px) 541px, 100vw",
   },
   {
     title: "APP DESIGN",
     href: "/app-design",
     imageSrc: "/images/app-design.png",
-    cardClassName: "lg:h-77",
+    cardClassName: "xl:h-77",
     imageSizes: "(min-width: 1024px) 541px, 100vw",
   },
   {
     title: "GRAPHIC DESIGN",
     href: "/graphic-design",
     imageSrc: "/images/graphic-design.png",
-    cardClassName: "lg:h-77",
+    cardClassName: "xl:h-77",
     imageSizes: "(min-width: 1024px) 541px, 100vw",
   },
 ];
@@ -69,7 +69,7 @@ function HomeServiceCard({
           <span>View Projects</span>
           <Image
             src="/icons/right-arrow.svg"
-            alt=""
+            alt="right arrow"
             aria-hidden="true"
             width={7}
             height={10}
@@ -84,16 +84,13 @@ export function HomeServices() {
   const [featuredService, ...secondaryServices] = homeServices;
 
   return (
-    <section
-      className="px-6 py-30 sm:px-10 lg:px-0"
-      aria-labelledby="home-services-heading"
-    >
-      <div className="mx-auto max-w-277.75 lg:h-160">
+    <section className="py-30 lg:px-0" aria-labelledby="home-services-heading">
+      <div className="mx-auto max-w-277.75 h-full xl:h-160">
         <h2 id="home-services-heading" className="sr-only">
           Home services
         </h2>
 
-        <div className="grid gap-7.25 lg:h-full lg:grid-cols-2">
+        <div className="grid gap-7.25 lg:h-full xl:grid-cols-2">
           <HomeServiceCard {...featuredService} />
 
           <div className="grid gap-6 lg:grid-rows-2">

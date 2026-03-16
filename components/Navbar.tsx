@@ -14,7 +14,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-designo-white px-6 py-8 sm:px-10 lg:px-0 lg:py-16">
+    <header className="bg-designo-white px-6 sm:px-10 md:max-xl:px-6 xl:px-0 py-16">
       <nav
         className="flex items-center justify-between bg-transparent max-w-[1111px] mx-auto"
         aria-label="Primary"

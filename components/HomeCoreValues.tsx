@@ -29,8 +29,8 @@ const coreValues: CoreValue[] = [
 
 function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
   return (
-    <article className="flex w-full max-w-[350px] flex-col items-center gap-12 text-center lg:h-[412px] lg:w-[350px] lg:justify-between lg:gap-0">
-      <div className="flex h-[202px] w-[202px] items-center justify-center">
+    <article className="w-full xl:flex xl:flex-col items-center gap-12 xl:text-center xl:h-103 xl:w-87.5 xl:justify-between xl:gap-0 grid grid-cols-[auto_1fr]">
+      <div>
         <Image
           src={imageSrc}
           alt=""
@@ -40,7 +40,7 @@ function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
         />
       </div>
 
-      <div className="flex max-w-[350px] flex-col gap-8">
+      <div className="flex xl:max-w-87.5 flex-col gap-4 xl:gap-8">
         <h3 className="text-preset-3 text-designo-grey-dark uppercase">
           {title}
         </h3>
@@ -59,18 +59,18 @@ export function HomeCoreValues() {
         aria-hidden="true"
         width={1609}
         height={950}
-        className="pointer-events-none absolute top-31 -right-41 hidden h-[594px] w-[1006px] max-w-none rotate-180 xl:block "
+        className="pointer-events-none absolute top-31 -right-41 hidden h-148.5 w-251.5 max-w-none rotate-180 xl:block "
       />
 
       <section
-        className="relative isolate overflow-hidden px-6 py-16 sm:px-10 lg:px-0 lg:pb-30 lg:pt-0"
+        className="relative isolate overflow-hidden pb-16 lg:px-0 lg:pb-30 lg:pt-0"
         aria-labelledby="home-core-values-heading"
       >
         <h2 id="home-core-values-heading" className="sr-only">
           Core values
         </h2>
 
-        <div className="relative grid justify-items-center gap-16 lg:grid-cols-3 lg:gap-[30px]">
+        <div className="relative grid justify-items-center gap-16 xl:grid-cols-3 lg:gap-7.5">
           {coreValues.map((value) => (
             <HomeCoreValueCard key={value.title} {...value} />
           ))}
