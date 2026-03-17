@@ -38,6 +38,20 @@ body {
   line-height: 36px;
 }
 
+@utility preset-mobile-heading-2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 1.4px;
+}
+
+@utility preset-mobile-link-1 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: 5px;
+}
+
 @utility preset-mobile-body {
   font-weight: 400;
   font-size: 15px;

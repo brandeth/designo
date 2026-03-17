@@ -8,6 +8,7 @@ import photonImage from "@/public/images/photon.png";
 import transferImage from "@/public/images/transfer.png";
 import { PageSection } from "@/components/PageSection";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Services } from "@/components/Services";
 
 const description =
   "We build websites that serve as powerful marketing tools and bring memorable brand experiences.";
@@ -65,10 +66,10 @@ const webDesignProjects: WebDesignProject[] = [
 
 export default function WebDesignPage() {
   return (
-    <main className="bg-background text-foreground">
+    <main className="bg-background text-foreground mb-12 grid gap-y-20">
       <PageSection title="Web Design" description={description} />
-
-      <section className="px-6 py-30 md:px-0" aria-label="Web design projects">
+      {/* py-30 */}
+      <section className="px-6  md:px-0" aria-label="Web design projects">
         <div className="mx-auto grid max-w-277.75 gap-10 md:gap-8 xl:grid-cols-3">
           {webDesignProjects.map((project) => (
             <ProjectCard
@@ -85,6 +86,8 @@ export default function WebDesignPage() {
           ))}
         </div>
       </section>
+
+      <Services excludedHref="/web-design" />
     </main>
   );
 }
