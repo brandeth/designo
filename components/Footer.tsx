@@ -80,6 +80,8 @@ export function Footer({ className }: FooterProps) {
             />
           </Link>
 
+          <div className="h-px w-full bg-designo-white/10 block md:hidden" />
+
           <nav
             className="flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-[42px]"
             aria-label="Footer"
@@ -96,7 +98,7 @@ export function Footer({ className }: FooterProps) {
           </nav>
         </div>
 
-        <div className="h-px w-full bg-designo-white/10" />
+        <div className="h-px w-full bg-designo-white/10 hidden md:block" />
 
         <div className="grid gap-10 text-center text-designo-white sm:gap-7.5 lg:grid-cols-[350px_350px_1fr] md:grid-cols-[1fr_1fr_auto] lg:items-end md:text-left">
           <div className="preset-body opacity-50">

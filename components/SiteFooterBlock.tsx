@@ -13,7 +13,7 @@ export function SiteFooterBlock({ showCta = true }: SiteFooterBlockProps) {
   const shouldShowCta = showCta && pathname !== "/contact";
 
   const footerClassName = shouldShowCta
-    ? "pt-40 sm:pt-44 lg:pt-[151.82px]"
+    ? "pt-[16rem] sm:pt-44 lg:pt-[151.82px] -mt-[8rem] md:-mt-4"
     : undefined;
 
   return (
