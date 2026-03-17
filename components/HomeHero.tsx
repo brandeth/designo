@@ -3,7 +3,7 @@ import { Button } from "@/components/Button";
 
 export function HomeHero() {
   return (
-    <section className="relative isolate md:pt-6 sm:pt-0.75 md:px-0 max-w-277.75 mx-auto">
+    <section className="relative isolate md:pt-6 sm:pt-0.75 md:px-0 max-w-277.75 xl:mx-auto xl:w-full">
       <Image
         src="/shapes/bg-pattern-leaf.svg"
         alt=""
