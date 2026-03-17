@@ -108,7 +108,7 @@ export function Services({ excludedHref }: ServicesProps) {
         <div className="grid gap-7.25 lg:h-full xl:grid-cols-2">
           <ServiceCard {...featuredService} />
 
-          <div className="grid gap-6 lg:grid-rows-2">
+          <div className="grid gap-6 xl:grid-rows-2">
             {secondaryServices.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}

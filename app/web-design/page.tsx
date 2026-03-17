@@ -10,8 +10,7 @@ import { PageSection } from "@/components/PageSection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Services } from "@/components/Services";
 
-const description =
-  "We build websites that serve as powerful marketing tools and bring memorable brand experiences.";
+const description = `We build websites that serve as powerful marketing tools and bring memorable brand experiences.`;
 
 type WebDesignProject = {
   title: string;
@@ -66,7 +65,7 @@ const webDesignProjects: WebDesignProject[] = [
 
 export default function WebDesignPage() {
   return (
-    <main className="bg-background text-foreground mb-12 grid gap-y-20">
+    <main className="bg-background text-foreground mb-12 grid gap-y-20 md:max-xl:gap-y-26 md:max-xl:max-w-172.25 mx-auto">
       <PageSection title="Web Design" description={description} />
       {/* py-30 */}
       <section className="px-6  md:px-0" aria-label="Web design projects">

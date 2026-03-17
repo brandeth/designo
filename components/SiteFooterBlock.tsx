@@ -21,7 +21,7 @@ export function SiteFooterBlock({ showCta = true }: SiteFooterBlockProps) {
       {/* -mb-24 sm:-mb-24 lg:-mb-17 mt-12 bottom-2 */}
       <div className="relative bg-designo-white -mt-6">
         {shouldShowCta ? (
-          <div className="px-6">
+          <div className="md:max-xl:max-w-172.25 md:max-xl:mx-auto">
             <CtaSection />
           </div>
         ) : null}

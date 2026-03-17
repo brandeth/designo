@@ -13,7 +13,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ image, title, description }: ProjectCardProps) {
   return (
-    <article className="overflow-hidden rounded-[15px] shadow-xs">
+    <article className="overflow-hidden rounded-[15px] shadow-xs grid grid-cols-1 md:max-xl:grid-cols-2">
       <div>
         <Image
           src={image.src}
@@ -24,7 +24,7 @@ export function ProjectCard({ image, title, description }: ProjectCardProps) {
         />
       </div>
 
-      <div className="flex flex-col gap-4 bg-designo-peach-extra-light px-8 py-8 text-center">
+      <div className="flex flex-col md:max-xl:justify-center gap-4 bg-designo-peach-extra-light px-8 py-8 text-center">
         <h3 className="preset-3 text-center text-designo-peach">{title}</h3>
         <p className="preset-body text-designo-grey-dark">{description}</p>
       </div>

@@ -117,7 +117,7 @@ export function Navbar() {
   return (
     <header className="relative z-50 bg-designo-white px-6 py-8.75 sm:px-10 md:max-xl:px-6 md:py-16 xl:px-0">
       <nav
-        className="relative z-20 mx-auto flex max-w-277.75 items-center justify-between bg-transparent"
+        className="relative z-20 mx-auto flex max-w-277.75 items-center justify-between bg-transparent md:max-xl:max-w-172.25"
         aria-label="Primary"
       >
         <Link href="/" aria-label="Designo home">
