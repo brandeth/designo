@@ -3,7 +3,7 @@ import { Button } from "@/components/Button";
 
 export function CtaSection() {
   return (
-    <section className="px-6 sm:px-10 lg:px-0 relative top-16 z-1">
+    <section className="lg:px-0 relative top-16 z-1">
       <div className="relative mx-auto max-w-[1111px] overflow-hidden rounded-[15px] bg-designo-peach md:max-xl:h-[350px] flex justify-center items-center xl:h-73">
         <Image
           src="/shapes/shape-cta-alt.png"

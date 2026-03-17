@@ -52,18 +52,18 @@ function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
 
 export function HomeCoreValues() {
   return (
-    <div className="relative max-w-277.75 mx-auto">
+    <div className="relative">
       <Image
         src="/shapes/bg-pattern-leaf.svg"
         alt=""
         aria-hidden="true"
         width={1609}
         height={950}
-        className="pointer-events-none absolute top-31 -right-41 hidden h-148.5 w-251.5 max-w-none rotate-180 xl:block "
+        className="pointer-events-none absolute top-31 right-0 hidden h-148.5 w-250 max-w-none rotate-180 xl:block "
       />
 
       <section
-        className="relative isolate overflow-hidden pb-16 lg:px-0 md:max-xl:pb-16 xl:pb-30 lg:pt-0"
+        className="relative max-w-277.75 mx-auto isolate overflow-hidden pb-16 lg:px-0 md:max-xl:pb-16 xl:pb-30 lg:pt-0"
         aria-labelledby="home-core-values-heading"
       >
         <h2 id="home-core-values-heading" className="sr-only">
