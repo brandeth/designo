@@ -1,15 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import { Button } from "@/components/Button";
 
 export function HomeHero() {
-  const handleLearnMoreClick = () => {
-    console.log("HomeHero LEARN MORE clicked");
-  };
-
   return (
-    <section className="relative isolate md:pt-6 xl:px-10 sm:pt-0.75 md:px-0 max-w-277.75 mx-auto">
+    <section className="relative isolate md:pt-6 sm:pt-0.75 md:px-0 max-w-277.75 mx-auto">
       <Image
         src="/shapes/bg-pattern-leaf.svg"
         alt=""
@@ -40,23 +34,19 @@ export function HomeHero() {
         />
 
         <div className="relative grid md:max-xl:min-h-210.75 items-start pt-20 text-center sm:pt-16 md:max-xl:h-full md:max-xl:grid-rows-[auto_1fr] md:max-xl:justify-items-center md:max-xl:gap-0 lg:h-full xl:grid-cols-[540px_1fr] lg:items-center xl:px-24 lg:pt-0 lg:text-left">
-          <div className="z-15 flex flex-col md:max-xl:justify-center items-center gap-10 lg:items-start md:max-xl:gap-4.75 px-6 sm:px-14">
+          <div className="z-15 flex flex-col md:max-xl:justify-center items-center gap-10 lg:items-start md:max-xl:gap-4.75 px-6 sm:px-14 xl:px-0">
             <div className="space-y-8.75 md:max-xl:text-center md:max-xl:flex md:max-xl:flex-col">
-              <h1 className="mx-auto max-w-[540px] preset-mobile-heading md:preset-1 text-designo-white md:max-lg:tracking-normal! lg:mx-0">
+              <h1 className="mx-auto max-w-135 preset-mobile-heading md:preset-1 text-designo-white md:max-lg:tracking-normal! lg:mx-0">
                 Award-winning custom designs and digital branding solutions
               </h1>
-              <p className="mx-auto md:max-xl:max-w-[445px] xl:max-w-[400px] self-center md:preset-body preset-mobile-body text-designo-white lg:mx-0">
+              <p className="mx-auto md:max-xl:max-w-111.25 xl:max-w-114.75 self-center md:preset-body preset-mobile-body text-designo-white lg:mx-0">
                 With over 10 years in the industry, we are experienced in
                 creating fully responsive websites, app design, and engaging
                 brand experiences. Find out more about our services.
               </p>
             </div>
 
-            <Button
-              variant="secondary"
-              className="md:max-xl:self-center"
-              onClick={handleLearnMoreClick}
-            >
+            <Button variant="secondary" className="md:max-xl:self-center">
               LEARN MORE
             </Button>
           </div>
