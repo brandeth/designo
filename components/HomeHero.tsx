@@ -20,7 +20,7 @@ export function HomeHero() {
           aria-hidden="true"
           width={1024}
           height={1024}
-          className="pointer-events-none absolute top-0 md:max-xl:hidden right-0 h-auto w-160 max-w-none"
+          className="pointer-events-none absolute top-1/2 -translate-y-1/2 md:top-1/2 md:max-xl:hidden max-md:left-0 md:right-0 h-auto w-160 max-w-none"
         />
 
         {/* md:max-xl:[top-1/2] */}
