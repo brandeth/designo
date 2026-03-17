@@ -61,7 +61,7 @@ const socialLinks = [
 
 export function Footer({ className }: FooterProps) {
   const classes = [
-    "w-full bg-designo-black px-6 py-16 sm:px-10 sm:py-20 lg:px-0 lg:py-18",
+    "w-full bg-designo-black px-6 py-16 sm:py-20 xl:px-0 lg:py-18",
     className,
   ]
     .filter(Boolean)

@@ -4,7 +4,7 @@ import { Button } from "@/components/Button";
 export function CtaSection() {
   return (
     <section className="px-6 sm:px-10 lg:px-0 relative top-16 z-1">
-      <div className="relative mx-auto max-w-[1111px] overflow-hidden rounded-[15px] bg-designo-peach md:max-xl:h-[350px] flex justify-center items-center lg:h-73">
+      <div className="relative mx-auto max-w-[1111px] overflow-hidden rounded-[15px] bg-designo-peach md:max-xl:h-[350px] flex justify-center items-center xl:h-73">
         <Image
           src="/shapes/shape-cta-alt.png"
           alt="cta background shape"
@@ -16,8 +16,8 @@ export function CtaSection() {
 
         {/* min-h-94.75 px-6 py-16 sm:px-14 sm:py-14.25 lg:px-24*/}
 
-        <div className="relative z-10 grid gap-10 text-center lg:min-w-230 lg:h-full lg:min-h-0 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-24  lg:py-0 lg:text-left">
-          <div className="flex flex-col items-center gap-4 lg:items-start">
+        <div className="relative z-10 grid gap-10 text-center lg:min-w-230 xl:h-full lg:min-h-0 xl:grid-cols-[1fr_auto] md:max-xl:justify-center lg:items-center xl:gap-24 md:max-xl:gap-8 lg:py-0 lg:text-left">
+          <div className="flex flex-col items-center gap-4 md:max-xl:text-center xl:items-start">
             <h2 className="max-w-67 text-preset-2 leading-10! tracking-normal! text-designo-white">
               Let&apos;s talk about your project
             </h2>
@@ -28,7 +28,7 @@ export function CtaSection() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center lg:justify-end">
+          <div className="flex items-center justify-center xl:justify-end">
             <Button variant="secondary">GET IN TOUCH</Button>
           </div>
         </div>

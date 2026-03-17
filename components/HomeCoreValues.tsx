@@ -63,7 +63,7 @@ export function HomeCoreValues() {
       />
 
       <section
-        className="relative isolate overflow-hidden pb-16 lg:px-0 lg:pb-30 lg:pt-0"
+        className="relative isolate overflow-hidden pb-16 lg:px-0 md:max-xl:pb-16 xl:pb-30 lg:pt-0"
         aria-labelledby="home-core-values-heading"
       >
         <h2 id="home-core-values-heading" className="sr-only">
