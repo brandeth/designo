@@ -29,7 +29,7 @@ const coreValues: CoreValue[] = [
 
 function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
   return (
-    <article className="w-full xl:flex xl:flex-col items-center gap-12 xl:text-center xl:h-103 xl:w-87.5 xl:justify-between xl:gap-0 grid grid-cols-[auto_1fr]">
+    <article className="w-full flex flex-col items-center gap-12 xl:text-center xl:h-103 xl:w-87.5 xl:justify-between xl:gap-0 md:max-xl:grid md:max-xl:grid-cols-[auto_1fr]">
       <div>
         <Image
           src={imageSrc}
@@ -50,7 +50,7 @@ function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
 
 export function HomeCoreValues() {
   return (
-    <div className="relative">
+    <div className="relative px-6 md:px-0">
       <Image
         src="/shapes/bg-pattern-leaf.svg"
         alt=""
@@ -61,7 +61,7 @@ export function HomeCoreValues() {
       />
 
       <section
-        className="relative max-w-277.75 mx-auto isolate overflow-hidden pb-16 lg:px-0 md:max-xl:pb-16 xl:pb-30 lg:pt-0"
+        className="relative max-w-277.75 mx-auto isolate overflow-hidden pb-16 lg:px-0 md:max-xl:pb-16 xl:pb-30 lg:pt-0 text-center md:text-left"
         aria-labelledby="home-core-values-heading"
       >
         <h2 id="home-core-values-heading" className="sr-only">

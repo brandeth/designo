@@ -84,7 +84,10 @@ export function HomeServices() {
   const [featuredService, ...secondaryServices] = homeServices;
 
   return (
-    <section className="py-30 lg:px-0" aria-labelledby="home-services-heading">
+    <section
+      className="py-30 px-6 md:px-0"
+      aria-labelledby="home-services-heading"
+    >
       <div className="mx-auto max-w-277.75 h-full xl:h-160">
         <h2 id="home-services-heading" className="sr-only">
           Home services
