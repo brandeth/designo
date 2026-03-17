@@ -16,7 +16,7 @@ type TextareaProps = ComponentPropsWithoutRef<"textarea"> & {
 const DEFAULT_ROWS = 3;
 
 const baseClasses =
-  "w-full border-0 bg-transparent px-4 py-[11px] text-designo-white text-preset-body outline-none shadow-[inset_0_-1px_0_0_#fff] transition-[box-shadow] placeholder:text-designo-white/50 focus:shadow-[inset_0_-3px_0_0_#fff] data-[filled=true]:shadow-[inset_0_-3px_0_0_#fff]";
+  "w-full border-0 bg-transparent px-4 py-[11px] text-designo-white preset-body outline-none shadow-[inset_0_-1px_0_0_#fff] transition-[box-shadow] placeholder:text-designo-white/50 focus:shadow-[inset_0_-3px_0_0_#fff] data-[filled=true]:shadow-[inset_0_-3px_0_0_#fff]";
 
 function hasTextareaValue(
   value: TextareaProps["value"] | TextareaProps["defaultValue"],

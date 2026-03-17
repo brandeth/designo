@@ -99,13 +99,13 @@ export function Footer({ className }: FooterProps) {
         <div className="h-px w-full bg-designo-white/10" />
 
         <div className="grid gap-10 text-center text-designo-white sm:gap-7.5 lg:grid-cols-[350px_350px_1fr] md:grid-cols-[1fr_1fr_auto] lg:items-end md:text-left">
-          <div className="text-preset-body opacity-50">
+          <div className="preset-body opacity-50">
             <p className="font-bold">Designo Central Office</p>
             <p>3886 Wellington Street</p>
             <p>Toronto, Ontario M9C 3J5</p>
           </div>
 
-          <div className="text-preset-body opacity-50">
+          <div className="preset-body opacity-50">
             <p>Contact Us (Central Office)</p>
             <p>P : +1 253-863-8967</p>
             <p>M : contact@designo.co</p>

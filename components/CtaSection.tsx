@@ -18,11 +18,11 @@ export function CtaSection() {
 
         <div className="relative z-10 grid gap-10 text-center lg:min-w-230 xl:h-full lg:min-h-0 xl:grid-cols-[1fr_auto] md:max-xl:justify-center lg:items-center xl:gap-24 md:max-xl:gap-8 lg:py-0 lg:text-left">
           <div className="flex flex-col items-center gap-4 md:max-xl:text-center xl:items-start">
-            <h2 className="max-w-67 text-preset-2 leading-10! tracking-normal! text-designo-white">
+            <h2 className="max-w-67 preset-2 leading-10! tracking-normal! text-designo-white">
               Let&apos;s talk about your project
             </h2>
 
-            <p className="md:max-w-110 xl:max-w-114.75 text-preset-body text-designo-white">
+            <p className="md:max-w-110 xl:max-w-114.75 preset-body text-designo-white">
               Ready to take it to the next level? Contact us today and find out
               how our expertise can help your business grow.
             </p>

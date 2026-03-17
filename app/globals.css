@@ -31,27 +31,39 @@ body {
   font-family: var(--font-jost), Arial, Helvetica, sans-serif;
 }
 
-.text-preset-1 {
+@utility preset-mobile-heading {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+@utility preset-mobile-body {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@utility preset-1 {
   font-weight: 500;
   font-size: 48px;
   line-height: 48px;
 }
 
-.text-preset-2 {
+@utility preset-2 {
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 2px;
 }
 
-.text-preset-3 {
+@utility preset-3 {
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 5px;
 }
 
-.text-preset-body {
+@utility preset-body {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;

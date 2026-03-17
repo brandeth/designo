@@ -60,7 +60,7 @@ function HomeServiceCard({
       <div className="home-service-overlay absolute inset-0 bg-designo-black/35 transition-colors duration-200" />
 
       <div className="relative flex h-full flex-col items-center justify-center gap-6 px-6 text-center">
-        <h2 className="text-preset-2 text-designo-white uppercase">{title}</h2>
+        <h2 className="preset-2 text-designo-white uppercase">{title}</h2>
 
         <Link
           href={href}

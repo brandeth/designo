@@ -19,8 +19,8 @@ export function ContactUsSection() {
         <div className="relative mx-auto grid px-6 gap-23.75 sm:px-10 lg:h-full justify-center lg:grid-cols-[445px_381px] lg:items-center">
           <div className="flex max-w-111.25 flex-col gap-8 text-center lg:min-h-46 lg:justify-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="text-preset-1 text-designo-white">Contact Us</h1>
-              <p className="text-preset-body text-designo-white">
+              <h1 className="preset-1 text-designo-white">Contact Us</h1>
+              <p className="preset-body text-designo-white">
                 Ready to take it to the next level? Let&apos;s talk about your
                 project or idea and find out how we can help your business grow.
                 If you are looking for unique digital experiences that&apos;s

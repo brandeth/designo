@@ -41,10 +41,8 @@ function HomeCoreValueCard({ title, description, imageSrc }: CoreValue) {
       </div>
 
       <div className="flex xl:max-w-87.5 flex-col gap-4 xl:gap-8">
-        <h3 className="text-preset-3 text-designo-grey-dark uppercase">
-          {title}
-        </h3>
-        <p className="text-preset-body text-designo-grey-dark">{description}</p>
+        <h3 className="preset-3 text-designo-grey-dark uppercase">{title}</h3>
+        <p className="preset-body text-designo-grey-dark">{description}</p>
       </div>
     </article>
   );

@@ -14,7 +14,7 @@ type InputProps = ComponentPropsWithoutRef<"input"> & {
 };
 
 const baseClasses =
-  "w-full border-0 bg-transparent px-4 py-[11px] text-designo-white text-preset-body outline-none shadow-[inset_0_-1px_0_0_#fff] transition-[box-shadow] placeholder:text-designo-white/50 focus:shadow-[inset_0_-3px_0_0_#fff] data-[filled=true]:shadow-[inset_0_-3px_0_0_#fff]";
+  "w-full border-0 bg-transparent px-4 py-[11px] text-designo-white preset-body outline-none shadow-[inset_0_-1px_0_0_#fff] transition-[box-shadow] placeholder:text-designo-white/50 focus:shadow-[inset_0_-3px_0_0_#fff] data-[filled=true]:shadow-[inset_0_-3px_0_0_#fff]";
 
 function hasInputValue(
   value: InputProps["value"] | InputProps["defaultValue"],
