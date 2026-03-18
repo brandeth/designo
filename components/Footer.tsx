@@ -83,7 +83,7 @@ export function Footer({ className }: FooterProps) {
           <div className="h-px w-full bg-designo-white/10 block md:hidden" />
 
           <nav
-            className="flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-[42px]"
+            className="flex flex-col items-center gap-8 md:flex-row sm:flex-wrap sm:justify-center sm:gap-10.5"
             aria-label="Footer"
           >
             {navigationLinks.map((link) => (
