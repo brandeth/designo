@@ -65,10 +65,13 @@ const webDesignProjects: WebDesignProject[] = [
 
 export default function WebDesignPage() {
   return (
-    <main className="bg-background text-foreground mb-12 grid gap-y-20 md:max-xl:gap-y-26 md:max-xl:max-w-172.25 mx-auto">
+    <main className="bg-background text-foreground mb-12 grid gap-y-20 md:max-xl:gap-y-26 md:max-xl:max-w-172.25 mx-auto xl:max-w-277.75">
       <PageSection title="Web Design" description={description} />
-      {/* py-30 */}
-      <section className="px-6  md:px-0" aria-label="Web design projects">
+      {/* py-30 px-6*/}
+      <section
+        className="max-w-81.75 md:max-w-none md:px-0 mx-auto"
+        aria-label="Web design projects"
+      >
         <div className="mx-auto grid max-w-277.75 gap-10 md:gap-8 xl:grid-cols-3">
           {webDesignProjects.map((project) => (
             <ProjectCard

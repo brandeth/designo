@@ -28,7 +28,7 @@ export default function RootLayout({
 
         {/* max-w-277.75 */}
         <div className="mx-auto w-full max-w-360 flex-1 z-1 bg-designo-white md:max-xl:px-6">
-          {children}
+          <div>{children}</div>
         </div>
         <SiteFooterBlock />
       </body>

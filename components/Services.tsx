@@ -100,15 +100,17 @@ export function Services({ excludedHref }: ServicesProps) {
   return (
     // py-30
     <section className=" px-6 md:px-0" aria-labelledby="services-heading">
-      <div className="mx-auto max-w-277.75 h-full xl:h-160">
+      {/* xl:h-160 */}
+      <div className="mx-auto max-w-277.75 h-full ">
         <h2 id="services-heading" className="sr-only">
           Services
         </h2>
 
-        <div className="grid gap-7.25 lg:h-full xl:grid-cols-2">
+        <div className="grid gap-7.25 md:h-full xl:h-auto xl:grid-cols-2">
           <ServiceCard {...featuredService} />
 
-          <div className="grid gap-6 xl:grid-rows-2">
+          {/* xl:grid-rows-2 */}
+          <div className="grid gap-6 ">
             {secondaryServices.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}
