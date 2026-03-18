@@ -7,7 +7,7 @@ type PageSectionProps = {
 
 export function PageSection({ title, description }: PageSectionProps) {
   return (
-    <section className="bg-designo-peach md:rounded-[15px]">
+    <section className="bg-designo-peach md:rounded-[15px] overflow-hidden">
       <div className="relative isolate overflow-hidden px-6  md:max-xl:py-0 md:max-xl:h-63 md:max-xl:items-center md:max-xl:grid text-center text-designo-white sm:px-10 xl:h-63 grid items-center h-80">
         <Image
           src="/shapes/page-section-alt.svg"

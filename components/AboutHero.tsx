@@ -24,7 +24,7 @@ export function AboutHero() {
             aria-hidden="true"
             width={876}
             height={584}
-            className="pointer-events-none absolute right-0 h-auto max-w-none md:hidden -top-36 w-220"
+            className="pointer-events-none absolute right-0 h-auto max-w-none md:hidden -top-36"
           />
 
           <div className="relative z-10 flex max-w-81.75 flex-col items-center justify-center gap-6 md:max-w-[28rem] md:items-start md:text-left">
