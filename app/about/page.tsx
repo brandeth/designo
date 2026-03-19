@@ -1,27 +1,6 @@
 import { AboutHero } from "@/components/AboutHero";
-import {
-  ImageTextLink,
-  type ImageTextLinkProps,
-} from "@/components/ImageTextLink";
 import { Description, ImageTextSection } from "@/components/ImageTextSection";
-
-const locationItems: ImageTextLinkProps[] = [
-  {
-    title: "canada",
-    imageSrc: "/images/illustration-canada.svg",
-    href: "/locations",
-  },
-  {
-    title: "australia",
-    imageSrc: "/images/illustration-australia.svg",
-    href: "/locations",
-  },
-  {
-    title: "united kingdom",
-    imageSrc: "/images/illustration-united-kingdom.svg",
-    href: "/locations",
-  },
-];
+import { OfficeLinksSection } from "../../components/OfficeLinksSection";
 
 export default function AboutPage() {
   return (
@@ -52,22 +31,7 @@ export default function AboutPage() {
         </ImageTextSection>
       </div>
       <div>
-        <section
-          className="px-6 md:px-0 pt-8 pb-16 md:py-0"
-          aria-labelledby="image-text-link-heading"
-        >
-          <div className="mx-auto max-w-277.75">
-            <h2 id="image-text-link-heading" className="sr-only">
-              Locations
-            </h2>
-
-            <div className="grid grid-cols-1 gap-12 md:max-xl:gap-24 xl:grid-cols-3">
-              {locationItems.map((location) => (
-                <ImageTextLink key={location.title} {...location} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <OfficeLinksSection />
       </div>
 
       <ImageTextSection

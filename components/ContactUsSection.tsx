@@ -5,8 +5,8 @@ import { Textarea } from "@/components/Textarea";
 
 export function ContactUsSection() {
   return (
-    <section className="px-6 py-16 sm:px-10 lg:px-0">
-      <div className="relative overflow-hidden rounded-[15px] bg-designo-peach lg:h-120">
+    <section>
+      <div className="relative overflow-hidden md:rounded-[15px] bg-designo-peach md:h-[711px] h-[764px] xl:h-120 md:justify-center grid">
         <Image
           src="/shapes/shape-contact-us.png"
           alt=""
@@ -16,11 +16,13 @@ export function ContactUsSection() {
           className="pointer-events-none absolute top-0 left-0 h-auto w-160 max-w-none"
         />
 
-        <div className="relative mx-auto grid px-6 gap-23.75 sm:px-10 lg:h-full justify-center lg:grid-cols-[445px_381px] lg:items-center">
-          <div className="flex max-w-111.25 flex-col gap-8 text-center lg:min-h-46 lg:justify-center lg:text-left">
+        <div className="relative xl:mx-auto flex flex-col gap-8 xl:grid px-6 xl:gap-23.75 sm:px-10 xl:h-full justify-center xl:grid-cols-[445px_381px] xl:items-center">
+          <div className="flex max-w-111.25 md:max-xl:max-w-none md:w-[573px] md:text-left flex-col gap-8 text-center xl:min-h-46 xl:justify-center xl:text-left">
             <div className="space-y-6">
-              <h1 className="preset-1 text-designo-white">Contact Us</h1>
-              <p className="preset-body text-designo-white">
+              <h1 className="preset-mobile-heading md:preset-1 text-designo-white">
+                Contact Us
+              </h1>
+              <p className="preset-mobile-body md:preset-body text-designo-white md:tracking-normal">
                 Ready to take it to the next level? Let&apos;s talk about your
                 project or idea and find out how we can help your business grow.
                 If you are looking for unique digital experiences that&apos;s
@@ -32,7 +34,7 @@ export function ContactUsSection() {
           <form
             action="#"
             method="post"
-            className="flex min-w-0 flex-col min-h-92.75 lg:justify-between"
+            className="flex min-w-0 flex-col min-h-92.75 justify-between"
           >
             <div>
               <label className="sr-only" htmlFor="contact-name">
