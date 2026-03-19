@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { LoadAwareImage } from "@/components/LoadAwareImage";
 import aboutHeroDesktopImage from "@/public/images/image-about-hero-desktop.jpg";
 import aboutHeroMobileImage from "@/public/images/image-about-hero-mobile.jpg";
 import aboutHeroTabletImage from "@/public/images/image-about-hero-tablet.jpg";
@@ -44,7 +47,7 @@ export function AboutHero() {
         {/* lg:px-24 */}
 
         <div className="relative isolate flex h-98.75 items-center justify-center overflow-hidden bg-designo-peach px-6 text-center text-designo-white sm:px-10 md:order-1 md:h-78 xl:h-full md:px-14 ">
-          <Image
+          <LoadAwareImage
             src="/shapes/bg-pattern-hero-about-mobile.svg"
             alt=""
             aria-hidden="true"

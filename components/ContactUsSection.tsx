@@ -1,9 +1,9 @@
 "use client";
 
 import { type ChangeEvent, type SubmitEvent, useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
+import { LoadAwareImage } from "@/components/LoadAwareImage";
 import { Textarea } from "@/components/Textarea";
 
 const REQUIRED_ERROR = "Can’t be empty";
@@ -16,7 +16,6 @@ type FieldErrors = {
 
 export function ContactUsSection() {
   const [errors, setErrors] = useState<FieldErrors>({});
-
   function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -69,7 +68,7 @@ export function ContactUsSection() {
   return (
     <section>
       <div className="relative grid overflow-hidden bg-designo-peach h-191 md:h-177.75 md:justify-center md:rounded-[15px] xl:h-120">
-        <Image
+        <LoadAwareImage
           src="/shapes/shape-contact-us.png"
           alt=""
           aria-hidden="true"
