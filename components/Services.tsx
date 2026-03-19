@@ -1,10 +1,13 @@
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import Link from "next/link";
+import appDesignImage from "@/public/images/app-design.png";
+import graphicDesignImage from "@/public/images/graphic-design.png";
+import webDesignImage from "@/public/images/web-design.png";
 
 type Service = {
   title: string;
   href: string;
-  imageSrc: string;
+  imageSrc: ImageProps["src"];
   priority?: boolean;
   cardClassName?: string;
   imageSizes: string;
@@ -18,7 +21,7 @@ const services: Service[] = [
   {
     title: "WEB DESIGN",
     href: "/web-design",
-    imageSrc: "/images/web-design.png",
+    imageSrc: webDesignImage,
     priority: true,
     cardClassName: "xl:h-full",
     imageSizes: "(min-width: 1024px) 541px, 100vw",
@@ -26,14 +29,14 @@ const services: Service[] = [
   {
     title: "APP DESIGN",
     href: "/app-design",
-    imageSrc: "/images/app-design.png",
+    imageSrc: appDesignImage,
     cardClassName: "xl:h-77",
     imageSizes: "(min-width: 1024px) 541px, 100vw",
   },
   {
     title: "GRAPHIC DESIGN",
     href: "/graphic-design",
-    imageSrc: "/images/graphic-design.png",
+    imageSrc: graphicDesignImage,
     cardClassName: "xl:h-77",
     imageSizes: "(min-width: 1024px) 541px, 100vw",
   },
@@ -56,6 +59,7 @@ function ServiceCard({
         alt=""
         aria-hidden="true"
         fill
+        placeholder="blur"
         priority={priority}
         sizes={imageSizes}
         className="object-cover"

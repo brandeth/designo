@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
+import imageHeroPhone from "@/public/shapes/image-hero-phone.png";
 
 export function HomeHero() {
   return (
@@ -56,11 +57,12 @@ export function HomeHero() {
           </div>
 
           <Image
-            src="/shapes/image-hero-phone.png"
+            src={imageHeroPhone}
             alt="phone with designo app on the screen"
             aria-hidden="true"
             width={351}
             height={496}
+            placeholder="blur"
             sizes="(min-width: 1024px) 351px, (min-width: 640px) 320px, 284px"
             className="relative z-10 hidden md:block h-auto xl:w-156 xl:-right-20 md:max-xl:w-160 md:max-lg:row-start-2 md:max-lg:self-end lg:absolute md:bottom-25 lg:max-xl:-bottom-75 xl:-bottom-60 bottom-0"
           />
