@@ -1,5 +1,27 @@
 import { AboutHero } from "@/components/AboutHero";
+import {
+  ImageTextLink,
+  type ImageTextLinkProps,
+} from "@/components/ImageTextLink";
 import { Description, ImageTextSection } from "@/components/ImageTextSection";
+
+const locationItems: ImageTextLinkProps[] = [
+  {
+    title: "canada",
+    imageSrc: "/images/illustration-canada.svg",
+    href: "/locations",
+  },
+  {
+    title: "australia",
+    imageSrc: "/images/illustration-australia.svg",
+    href: "/locations",
+  },
+  {
+    title: "united kingdom",
+    imageSrc: "/images/illustration-united-kingdom.svg",
+    href: "/locations",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -27,6 +49,41 @@ export default function AboutPage() {
           </Description>
         </ImageTextSection>
       </div>
+      <section
+        className="px-6 md:px-0"
+        aria-labelledby="image-text-link-heading"
+      >
+        <div className="mx-auto max-w-277.75">
+          <h2 id="image-text-link-heading" className="sr-only">
+            Locations
+          </h2>
+
+          <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
+            {locationItems.map((location) => (
+              <ImageTextLink key={location.title} {...location} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <ImageTextSection
+        title="The Real Deal"
+        image="/images/image-real-deal-mobile.jpg"
+      >
+        <Description>
+          <p>
+            As strategic partners in our clients&apos; businesses, we are ready
+            to take on any challenge as our own. Solving real problems require
+            empathy and collaboration, and we strive to bring a fresh
+            perspective to every opportunity. We make design and technology more
+            accessible and give you tools to measure success.
+          </p>
+          <p>
+            We are visual storytellers in appealing and captivating ways. By
+            combining business and marketing strategies, we inspire audiences to
+            take action and drive real results.
+          </p>
+        </Description>
+      </ImageTextSection>
     </main>
   );
 }
