@@ -10,7 +10,7 @@ export type ImageTextLinkProps = {
 
 export function ImageTextLink({ title, imageSrc, href }: ImageTextLinkProps) {
   return (
-    <article className="grid h-91 grid-cols-1 grid-rows-[1fr_auto] justify-between overflow-hidden rounded-[15px] bg-designo-white">
+    <article className="grid h-91 grid-cols-1 grid-rows-[1fr_auto] justify-between overflow-hidden rounded-[15px] bg-designo-white gap-y-12">
       <div className="flex items-center justify-center px-6">
         <Image
           src={imageSrc}

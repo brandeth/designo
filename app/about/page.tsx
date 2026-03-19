@@ -25,12 +25,14 @@ const locationItems: ImageTextLinkProps[] = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-background text-foreground mx-auto grid w-full grid-cols-1 gap-y-20 md:max-xl:max-w-172.25 md:max-xl:gap-y-26 xl:max-w-277.75">
-      <div>
+    <main className="bg-background text-foreground mx-auto grid w-full grid-cols-1 gap-y-20 md:max-xl:max-w-172.25 md:max-xl:gap-y-26 xl:max-w-277.75 pb-16">
+      <div className="grid md:gap-y-26">
         <AboutHero />
         <ImageTextSection
           title="World-class talent"
           image="/images/image-world-class-talent-mobile.jpg"
+          tabletImage="/images/image-world-class-talent-tablet.jpg"
+          desktopImage="/images/image-world-class-talent-desktop.jpg"
         >
           <Description>
             <p>
@@ -49,25 +51,31 @@ export default function AboutPage() {
           </Description>
         </ImageTextSection>
       </div>
-      <section
-        className="px-6 md:px-0"
-        aria-labelledby="image-text-link-heading"
-      >
-        <div className="mx-auto max-w-277.75">
-          <h2 id="image-text-link-heading" className="sr-only">
-            Locations
-          </h2>
+      <div>
+        <section
+          className="px-6 md:px-0 pt-8 pb-16 md:py-0"
+          aria-labelledby="image-text-link-heading"
+        >
+          <div className="mx-auto max-w-277.75">
+            <h2 id="image-text-link-heading" className="sr-only">
+              Locations
+            </h2>
 
-          <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-            {locationItems.map((location) => (
-              <ImageTextLink key={location.title} {...location} />
-            ))}
+            <div className="grid grid-cols-1 gap-12 md:max-xl:gap-24 xl:grid-cols-3">
+              {locationItems.map((location) => (
+                <ImageTextLink key={location.title} {...location} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <ImageTextSection
         title="The Real Deal"
         image="/images/image-real-deal-mobile.jpg"
+        tabletImage="/images/image-real-deal-tablet.jpg"
+        desktopImage="/images/image-real-deal-desktop.jpg"
+        reverse
       >
         <Description>
           <p>
