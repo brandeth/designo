@@ -39,13 +39,8 @@ const variantClasses: Record<ButtonVariant, string> = {
   link: "h-auto w-auto rounded-none p-0",
 };
 
-export function Button({
-  variant = "primary",
-  className,
-  type = "button",
-  children,
-  ...props
-}: ButtonProps) {
+export function Button(props: ButtonProps) {
+  const { variant = "primary", className, children } = props;
   const layoutClasses = variant === "link" ? linkBaseClasses : baseClasses;
 
   const classes = [layoutClasses, variantClasses[variant], className]
@@ -68,15 +63,36 @@ export function Button({
   );
 
   if ("href" in props && props.href !== undefined) {
+    const {
+      variant: _variant,
+      className: _className,
+      children: _children,
+      ...linkProps
+    } = props;
+    void _variant;
+    void _className;
+    void _children;
+
     return (
-      <Link className={classes} {...props}>
+      <Link className={classes} {...linkProps}>
         {content}
       </Link>
     );
   }
 
+  const {
+    variant: _variant,
+    className: _className,
+    children: _children,
+    type = "button",
+    ...buttonProps
+  } = props;
+  void _variant;
+  void _className;
+  void _children;
+
   return (
-    <button className={classes} type={type} {...props}>
+    <button className={classes} type={type} {...buttonProps}>
       {content}
     </button>
   );
