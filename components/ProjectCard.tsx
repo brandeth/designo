@@ -12,6 +12,12 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ image, title, description }: ProjectCardProps) {
+  const hasBlurPlaceholder =
+    typeof image.src === "object" &&
+    image.src !== null &&
+    "blurDataURL" in image.src &&
+    typeof image.src.blurDataURL === "string";
+
   return (
     <article className="overflow-hidden rounded-[15px] shadow-xs grid grid-cols-1 md:max-xl:grid-cols-2 md:max-xl:h-77.5 group hover:cursor-pointer">
       <div>
@@ -20,6 +26,7 @@ export function ProjectCard({ image, title, description }: ProjectCardProps) {
           alt={image.alt ?? ""}
           width={image.width}
           height={image.height}
+          placeholder={hasBlurPlaceholder ? "blur" : "empty"}
           className="h-80 w-full"
         />
       </div>

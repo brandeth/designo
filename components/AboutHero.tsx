@@ -1,4 +1,7 @@
 import Image from "next/image";
+import aboutHeroDesktopImage from "@/public/images/image-about-hero-desktop.jpg";
+import aboutHeroMobileImage from "@/public/images/image-about-hero-mobile.jpg";
+import aboutHeroTabletImage from "@/public/images/image-about-hero-tablet.jpg";
 
 const description = `Founded in 2010, we are a creative agency that produces lasting results for our clients. We've partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We're always looking forward to creating brands, products, and digital experiences that connect with our clients' audiences.`;
 
@@ -8,27 +11,30 @@ export function AboutHero() {
       <div className="grid md:grid-cols-1 xl:grid-cols-[1fr_480px] xl:h-120 md:items-stretch">
         <div className="relative h-80 xl:order-2 xl:h-full">
           <Image
-            src="/images/image-about-hero-mobile.jpg"
+            src={aboutHeroMobileImage}
             alt="Team members collaborating at a table"
             fill
+            placeholder="blur"
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover md:hidden"
             priority
           />
 
           <Image
-            src="/images/image-about-hero-tablet.jpg"
+            src={aboutHeroTabletImage}
             alt="Team members collaborating at a table"
             fill
+            placeholder="blur"
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover hidden md:block xl:hidden"
             priority
           />
 
           <Image
-            src="/images/image-about-hero-desktop.jpg"
+            src={aboutHeroDesktopImage}
             alt="Team members collaborating at a table"
             fill
+            placeholder="blur"
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover hidden xl:block"
             priority

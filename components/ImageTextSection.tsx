@@ -1,21 +1,30 @@
 import type { ReactNode } from "react";
 
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 
 type DescriptionProps = {
   children: ReactNode;
 };
 
 type ImageTextSectionProps = {
-  image: string;
-  tabletImage?: string;
-  desktopImage?: string;
+  image: ImageProps["src"];
+  tabletImage?: ImageProps["src"];
+  desktopImage?: ImageProps["src"];
   title: string;
   description?: string;
   imageAlt?: string;
   reverse?: boolean;
   children?: ReactNode;
 };
+
+function hasBlurPlaceholder(imageSrc: ImageProps["src"]) {
+  return (
+    typeof imageSrc === "object" &&
+    imageSrc !== null &&
+    "blurDataURL" in imageSrc &&
+    typeof imageSrc.blurDataURL === "string"
+  );
+}
 
 export function Description({ children }: DescriptionProps) {
   return (
@@ -53,6 +62,11 @@ export function ImageTextSection({
         <p>{description}</p>
       </Description>
     ) : null);
+  const mobilePlaceholder = hasBlurPlaceholder(image) ? "blur" : "empty";
+  const tabletPlaceholder =
+    tabletImage && hasBlurPlaceholder(tabletImage) ? "blur" : "empty";
+  const desktopPlaceholder =
+    desktopImage && hasBlurPlaceholder(desktopImage) ? "blur" : "empty";
 
   return (
     <section className="mx-auto w-full max-w-277.75 overflow-hidden md:rounded-[15px]">
@@ -64,6 +78,7 @@ export function ImageTextSection({
             src={image}
             alt={imageAlt ?? title}
             fill
+            placeholder={mobilePlaceholder}
             sizes="(min-width: 768px) 50vw, 100vw"
             className={mobileImageClassName}
           />
@@ -73,6 +88,7 @@ export function ImageTextSection({
               src={tabletImage}
               alt={imageAlt ?? title}
               fill
+              placeholder={tabletPlaceholder}
               sizes="(min-width: 768px) 50vw, 100vw"
               className={tabletImageClassName}
             />
@@ -83,6 +99,7 @@ export function ImageTextSection({
               src={desktopImage}
               alt={imageAlt ?? title}
               fill
+              placeholder={desktopPlaceholder}
               sizes="(min-width: 768px) 50vw, 100vw"
               className={desktopImageClassName}
             />

@@ -1,3 +1,9 @@
+import realDealDesktopImage from "@/public/images/image-real-deal-desktop.jpg";
+import realDealMobileImage from "@/public/images/image-real-deal-mobile.jpg";
+import realDealTabletImage from "@/public/images/image-real-deal-tablet.jpg";
+import worldClassTalentDesktopImage from "@/public/images/image-world-class-talent-desktop.jpg";
+import worldClassTalentMobileImage from "@/public/images/image-world-class-talent-mobile.jpg";
+import worldClassTalentTabletImage from "@/public/images/image-world-class-talent-tablet.jpg";
 import { AboutHero } from "@/components/AboutHero";
 import { Description, ImageTextSection } from "@/components/ImageTextSection";
 import { OfficeLinksSection } from "../../components/OfficeLinksSection";
@@ -9,9 +15,9 @@ export default function AboutPage() {
         <AboutHero />
         <ImageTextSection
           title="World-class talent"
-          image="/images/image-world-class-talent-mobile.jpg"
-          tabletImage="/images/image-world-class-talent-tablet.jpg"
-          desktopImage="/images/image-world-class-talent-desktop.jpg"
+          image={worldClassTalentMobileImage}
+          tabletImage={worldClassTalentTabletImage}
+          desktopImage={worldClassTalentDesktopImage}
         >
           <Description>
             <p>
@@ -36,9 +42,9 @@ export default function AboutPage() {
 
       <ImageTextSection
         title="The Real Deal"
-        image="/images/image-real-deal-mobile.jpg"
-        tabletImage="/images/image-real-deal-tablet.jpg"
-        desktopImage="/images/image-real-deal-desktop.jpg"
+        image={realDealMobileImage}
+        tabletImage={realDealTabletImage}
+        desktopImage={realDealDesktopImage}
         reverse
       >
         <Description>
