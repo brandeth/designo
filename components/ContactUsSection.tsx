@@ -1,12 +1,74 @@
+"use client";
+
+import { type ChangeEvent, type SubmitEvent, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import { Textarea } from "@/components/Textarea";
 
+const REQUIRED_ERROR = "Can’t be empty";
+
+type FieldErrors = {
+  name?: string;
+  email?: string;
+  message?: string;
+};
+
 export function ContactUsSection() {
+  const [errors, setErrors] = useState<FieldErrors>({});
+
+  function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const nextErrors: FieldErrors = {};
+
+    if (!String(formData.get("name") ?? "").trim()) {
+      nextErrors.name = REQUIRED_ERROR;
+    }
+
+    if (!String(formData.get("email") ?? "").trim()) {
+      nextErrors.email = REQUIRED_ERROR;
+    }
+
+    if (!String(formData.get("message") ?? "").trim()) {
+      nextErrors.message = REQUIRED_ERROR;
+    }
+
+    if (Object.keys(nextErrors).length > 0) {
+      event.preventDefault();
+      setErrors(nextErrors);
+      return;
+    }
+
+    setErrors({});
+  }
+
+  function clearFieldError(field: keyof FieldErrors) {
+    return (
+      event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+    ) => {
+      if (!errors[field]) {
+        return;
+      }
+
+      if (event.currentTarget.value.trim()) {
+        setErrors((currentErrors) => {
+          if (!currentErrors[field]) {
+            return currentErrors;
+          }
+
+          return {
+            ...currentErrors,
+            [field]: undefined,
+          };
+        });
+      }
+    };
+  }
+
   return (
     <section>
-      <div className="relative overflow-hidden md:rounded-[15px] bg-designo-peach md:h-[711px] h-[764px] xl:h-120 md:justify-center grid">
+      <div className="relative grid overflow-hidden bg-designo-peach h-191 md:h-177.75 md:justify-center md:rounded-[15px] xl:h-120">
         <Image
           src="/shapes/shape-contact-us.png"
           alt=""
@@ -17,7 +79,7 @@ export function ContactUsSection() {
         />
 
         <div className="relative xl:mx-auto flex flex-col gap-8 xl:grid px-6 xl:gap-23.75 sm:px-10 xl:h-full justify-center xl:grid-cols-[445px_381px] xl:items-center">
-          <div className="flex max-w-111.25 md:max-xl:max-w-none md:w-[573px] md:text-left flex-col gap-8 text-center xl:min-h-46 xl:justify-center xl:text-left">
+          <div className="flex max-w-111.25 flex-col gap-8 text-center md:max-xl:max-w-none md:w-143.25 md:text-left xl:min-h-46 xl:justify-center xl:text-left">
             <div className="space-y-6">
               <h1 className="preset-mobile-heading md:preset-1 text-designo-white">
                 Contact Us
@@ -35,6 +97,7 @@ export function ContactUsSection() {
             action="#"
             method="post"
             className="flex min-w-0 flex-col min-h-92.75 justify-between"
+            onSubmit={handleSubmit}
           >
             <div>
               <label className="sr-only" htmlFor="contact-name">
@@ -45,6 +108,8 @@ export function ContactUsSection() {
                 name="name"
                 placeholder="Name"
                 autoComplete="name"
+                error={errors.name}
+                onChange={clearFieldError("name")}
               />
             </div>
 
@@ -58,6 +123,8 @@ export function ContactUsSection() {
                 type="email"
                 placeholder="Email Address"
                 autoComplete="email"
+                error={errors.email}
+                onChange={clearFieldError("email")}
               />
             </div>
 
@@ -83,6 +150,8 @@ export function ContactUsSection() {
                 name="message"
                 placeholder="Your Message"
                 autoComplete="off"
+                error={errors.message}
+                onChange={clearFieldError("message")}
               />
             </div>
 

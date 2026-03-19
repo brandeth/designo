@@ -29,7 +29,9 @@ export function CtaSection() {
           </div>
 
           <div className="flex items-start md:items-center justify-center xl:justify-end">
-            <Button variant="secondary">GET IN TOUCH</Button>
+            <Button variant="secondary" href="/contact">
+              GET IN TOUCH
+            </Button>
           </div>
         </div>
       </div>

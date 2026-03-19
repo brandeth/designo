@@ -46,7 +46,11 @@ export function HomeHero() {
               </p>
             </div>
 
-            <Button variant="secondary" className="md:max-xl:self-center">
+            <Button
+              variant="secondary"
+              href="/about"
+              className="md:max-xl:self-center"
+            >
               LEARN MORE
             </Button>
           </div>
