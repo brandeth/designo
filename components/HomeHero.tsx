@@ -1,8 +1,33 @@
+"use client";
+
+import { useCallback, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import imageHeroPhone from "@/public/shapes/image-hero-phone.png";
 
 export function HomeHero() {
+  const [desktopImageState, setDesktopImageState] = useState({
+    isVisible: true,
+    shouldAnimate: false,
+  });
+  const desktopImageRef = useCallback((image: HTMLImageElement | null) => {
+    if (!image) {
+      return;
+    }
+
+    setDesktopImageState((current) => {
+      if (image.complete) {
+        return current.isVisible && !current.shouldAnimate
+          ? current
+          : { isVisible: true, shouldAnimate: false };
+      }
+
+      return current.shouldAnimate && !current.isVisible
+        ? current
+        : { isVisible: false, shouldAnimate: true };
+    });
+  }, []);
+
   return (
     <section className="relative isolate md:pt-6 sm:pt-0.75 md:px-0 max-w-277.75 xl:mx-auto xl:w-full">
       <Image
@@ -62,9 +87,16 @@ export function HomeHero() {
             aria-hidden="true"
             width={351}
             height={496}
-            placeholder="blur"
+            ref={desktopImageRef}
+            onLoad={() =>
+              setDesktopImageState((current) =>
+                current.shouldAnimate && !current.isVisible
+                  ? { ...current, isVisible: true }
+                  : current,
+              )
+            }
             sizes="(min-width: 1024px) 351px, (min-width: 640px) 320px, 284px"
-            className="relative z-10 hidden md:block h-auto xl:w-156 xl:-right-20 md:max-xl:w-160 md:max-lg:row-start-2 md:max-lg:self-end lg:absolute md:bottom-25 lg:max-xl:-bottom-75 xl:-bottom-60 bottom-0"
+            className={`relative z-10 hidden md:block h-auto xl:w-156 xl:-right-20 md:max-xl:w-160 md:max-lg:row-start-2 md:max-lg:self-end lg:absolute md:bottom-25 lg:max-xl:-bottom-75 xl:-bottom-60 bottom-0 ${desktopImageState.shouldAnimate ? "transition-opacity duration-700" : ""} ${desktopImageState.isVisible ? "opacity-100" : "opacity-0"}`}
           />
 
           <Image
